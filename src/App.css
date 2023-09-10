@@ -49,3 +49,32 @@ button{
   width: 100px;
   height: 40px;
 }
+
+ul{
+
+  display: grid;
+  place-items: center;
+}
+
+
+li{
+
+list-style: none;
+height: 40px;
+width: 300px;
+background-color: #51e747;
+margin: 10px;
+padding-top: 20px;
+color: white;
+font-size: 23px;
+font-family: monospace;
+
+}
+
+#tasks
+{
+display: flex;
+flex-direction: row;
+align-items: center;
+
+}
