@@ -48,6 +48,11 @@ input{
 button{
   width: 100px;
   height: 40px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 8%;
+  color: white;
+  background-color:#4681f4;
 }
 
 ul{
@@ -78,3 +83,10 @@ flex-direction: row;
 align-items: center;
 
 }
+
+ #completed >img
+{
+  height: 40px;
+
+  
+} 

@@ -1,5 +1,7 @@
 import "./App.css";
 import { useState,useRef } from "react";
+import checkedlogo from './checked.png';
+import unchecklogo from './deleted.png';
 
 function App() {
 const [todoList, setToDoList] = useState([]);
@@ -7,10 +9,19 @@ const [currentTask, setCurrentTask] = useState();
 const inputTask = useRef(null);
 const  addTask= ()=>
 {
-  setToDoList([...todoList,{task:currentTask, completed:false}]);
+ 
+  if(currentTask==="" || currentTask===undefined)
+  {
+    alert("please add valid task name !!");
+  }
+  else{
+    setToDoList([...todoList,{task:currentTask, completed:false}]);
   //console.log(todoList);
   inputTask.current.value="";
   setCurrentTask("");
+
+  }
+  
 }
 
 const deleteTask = (taskToDelete)=>
@@ -57,9 +68,9 @@ const completeTask = (taskToComplete)=>
               <button onClick={()=>{completeTask(val.task)}}>Completed</button>
               <button onClick={()=>{deleteTask(val.task)}}>X</button>
 
-            {val.completed ? <h1>Completed </h1>:<h1>Not completed</h1>}
+            {val.completed ? <div id="completed"><img src={checkedlogo} alt="check-img"></img> </div>:<div id="completed"><img src={unchecklogo} alt="check-img"></img></div>}
 
-
+            {/* {val.completed ? <div id="completed">Completed</div>:<div id="completed">Not Completed</div>} */}
               </div>
               
              
