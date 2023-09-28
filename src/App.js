@@ -9,7 +9,7 @@ const [currentTask, setCurrentTask] = useState();
 const inputTask = useRef(null);
 const  addTask= ()=>
 {
- 
+  console.log(currentTask);
   if(currentTask==="" || currentTask===undefined)
   {
     alert("please add valid task name !!");
